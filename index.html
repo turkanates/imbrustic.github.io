@@ -117,6 +117,45 @@
             margin-bottom: 8px;
         }
 
+        .contact-form {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-transform: lowercase;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #3e2723;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            text-transform: lowercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #5d3a34;
+        }
+
         .products {
             display: flex;
             justify-content: center;
@@ -217,6 +256,15 @@
             <li><strong>doğal ambalaj:</strong> hasır/jüt ip detaylı otantik paketleme seçeneği.</li>
             <li><strong>kullanım ve bakım:</strong> bulaşık makinesinde yıkamayınız. elde yıkayıp kurulayınız. belirli aralıklarla zeytinyağı ile ovalayarak ahşabın ömrünü uzatabilirsiniz.</li>
         </ul>
+
+        <h3>bize ulaşın / mesaj gönderin</h3>
+        <form class="contact-form" action="https://formspree.io/f/turkan.ates@gmail.com" method="POST">
+            <input type="text" name="ad_soyad" placeholder="adınız soyadınız" required>
+            <input type="email" name="email" placeholder="e-posta adresiniz" required>
+            <input type="text" name="konu" placeholder="konu" required>
+            <textarea name="mesaj" placeholder="mesajınız" required></textarea>
+            <button type="submit">gönder</button>
+        </form>
     </section>
 
     <footer>

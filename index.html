@@ -117,8 +117,24 @@
             margin-bottom: 8px;
         }
 
+        .contact-container {
+            margin-top: 45px;
+            padding: 30px 25px;
+            background-color: rgba(245, 240, 235, 0.95);
+            border-radius: 8px;
+            border-left: 4px solid #3e2723;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-container h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #3e2723;
+            font-size: 19px;
+            text-transform: lowercase;
+        }
+
         .contact-form {
-            margin-top: 30px;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -128,10 +144,10 @@
         .contact-form textarea {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid #ccc;
+            border: 1px solid #d4c8be;
             border-radius: 6px;
             font-size: 14px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: #ffffff;
             text-transform: lowercase;
         }
 
@@ -258,14 +274,16 @@
             <li><strong>kullanım ve bakım:</strong> ürünleri bulaşık makinesinde yıkamayınız. elde yıkayıp kuruladıktan sonra belirli aralıklarla zeytinyağı ile ovalayarak ahşabın ömrünü uzatabilirsiniz.</li>
         </ul>
 
-        <h3>bize ulaşın ve mesaj gönderin</h3>
-        <form class="contact-form" action="https://formspree.io/f/turkan.ates@gmail.com" method="POST">
-            <input type="text" name="ad_soyad" placeholder="adınız soyadınız" required>
-            <input type="email" name="email" placeholder="e-posta adresiniz" required>
-            <input type="text" name="konu" placeholder="konu" required>
-            <textarea name="mesaj" placeholder="mesajınız" required></textarea>
-            <button type="submit">gönder</button>
-        </form>
+        <div class="contact-container">
+            <h3>iletişim</h3>
+            <form class="contact-form" action="https://formspree.io/f/turkan.ates@gmail.com" method="POST">
+                <input type="text" name="ad_soyad" placeholder="adınız soyadınız" required>
+                <input type="email" name="email" placeholder="e-posta adresiniz" required>
+                <input type="text" name="konu" placeholder="konu" required>
+                <textarea name="mesaj" placeholder="mesajınız" required></textarea>
+                <button type="submit">gönder</button>
+            </form>
+        </div>
     </section>
 
     <footer>

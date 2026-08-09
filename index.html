@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>imbrustic | el yapımı ahşap ürünler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Georgia", "Garamond", "Playfair Display", serif;
+            font-family: "Cormorant Garamond", "Georgia", serif;
         }
 
         body {
@@ -23,7 +26,7 @@
         }
 
         header {
-            background-color: rgba(255, 255, 255, 0.92);
+            background-color: rgba(255, 255, 255, 0.94);
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
@@ -34,26 +37,30 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
 
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
+        .brand-title, .brand-text {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            color: #a35d27;
             letter-spacing: 2px;
-            color: #2c2523;
             text-transform: lowercase;
+        }
+
+        .logo {
+            font-size: 28px;
         }
 
         nav a {
             margin-left: 25px;
             text-decoration: none;
             color: #2c2523;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: lowercase;
-            font-size: 16px;
+            font-size: 17px;
             transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #8c5a3c;
+            color: #a35d27;
         }
 
         .hero {
@@ -67,7 +74,7 @@
         }
 
         .hero h1 {
-            font-size: 32px;
+            font-size: 34px;
             margin-bottom: 20px;
             text-transform: lowercase;
             font-style: italic;
@@ -77,7 +84,7 @@
         }
 
         .hero p {
-            font-size: 17px;
+            font-size: 19px;
             color: #444;
             margin-bottom: 12px;
             text-transform: lowercase;
@@ -117,8 +124,8 @@
         .product-card h3 {
             margin: 15px 0 5px 0;
             text-transform: lowercase;
-            font-size: 18px;
-            font-weight: 500;
+            font-size: 20px;
+            font-weight: 600;
             color: #3e2723;
         }
 
@@ -133,23 +140,23 @@
         }
 
         .description-section h2 {
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 15px;
             text-transform: lowercase;
             color: #3e2723;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .description-section h3 {
-            font-size: 20px;
+            font-size: 22px;
             margin: 30px 0 12px 0;
             text-transform: lowercase;
             color: #3e2723;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .description-section p {
-            font-size: 16px;
+            font-size: 18px;
             color: #444;
             text-transform: lowercase;
             margin-bottom: 12px;
@@ -165,7 +172,7 @@
         }
 
         .description-section li {
-            font-size: 16px;
+            font-size: 18px;
             color: #444;
             text-transform: lowercase;
             margin-bottom: 10px;
@@ -180,7 +187,7 @@
             background-color: rgba(245, 240, 235, 0.95);
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-            border-top: 3px solid #8c5a3c;
+            border-top: 3px solid #a35d27;
             text-align: center;
         }
 
@@ -188,8 +195,9 @@
             margin-top: 0;
             margin-bottom: 20px;
             color: #3e2723;
-            font-size: 22px;
+            font-size: 24px;
             text-transform: lowercase;
+            font-weight: 600;
         }
 
         .contact-form {
@@ -206,7 +214,7 @@
             padding: 14px 18px;
             border: 1px solid #d4c8be;
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 16px;
             background-color: #ffffff;
             text-transform: lowercase;
             text-align: center;
@@ -216,7 +224,7 @@
 
         .contact-form input:focus, 
         .contact-form textarea:focus {
-            border-color: #8c5a3c;
+            border-color: #a35d27;
         }
 
         .contact-form textarea {
@@ -230,7 +238,7 @@
             padding: 14px 25px;
             border: none;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 17px;
             cursor: pointer;
             text-transform: lowercase;
             transition: background-color 0.3s ease;
@@ -239,7 +247,7 @@
         }
 
         .contact-form button:hover {
-            background-color: #5d3a34;
+            background-color: #a35d27;
         }
 
         footer {
@@ -248,14 +256,14 @@
             background-color: rgba(255, 255, 255, 0.92);
             margin-top: 60px;
             text-transform: lowercase;
-            font-size: 14px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">imbrustic</div>
+        <div class="logo brand-title">imbrustic</div>
         <nav>
             <a href="#hakkımızda">hakkımızda</a>
             <a href="#ürünler">ürünler</a>
@@ -326,7 +334,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 imbrustic - tüm hakları saklıdır.</p>
+        <p>&copy; 2026 <span class="brand-text">imbrustic</span> - tüm hakları saklıdır.</p>
     </footer>
 
 </body>

@@ -49,8 +49,8 @@
 
         .hero {
             text-align: center;
-            padding: 100px 20px;
-            background-color: rgba(255, 255, 255, 0.75);
+            padding: 80px 30px;
+            background-color: rgba(255, 255, 255, 0.85);
             margin: 40px auto;
             max-width: 800px;
             border-radius: 8px;
@@ -58,13 +58,17 @@
         }
 
         .hero h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: lowercase;
         }
 
         .hero p {
-            font-size: 18px;
-            color: #555;
+            font-size: 17px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            text-transform: lowercase;
         }
 
         .products {
@@ -95,6 +99,7 @@
 
         .product-card h3 {
             margin: 15px 0 10px 0;
+            text-transform: lowercase;
         }
 
         footer {
@@ -102,6 +107,7 @@
             padding: 30px;
             background-color: rgba(255, 255, 255, 0.92);
             margin-top: 50px;
+            text-transform: lowercase;
         }
     </style>
 </head>
@@ -116,22 +122,23 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>doğanın izinde </h1>
-        <p>zamansız tasarımlar, özgün ahşaplar </p>
+    <section class="hero" id="hakkımızda">
+        <h1>her parçanın bir hikayesi var</h1>
+        <p>ahşap çalışmalardan kalan parçaları değerlendirmek için kendi oyalandığımız ahşapların şekillenme hikayesi bizi mutlu etti.</p>
+        <p>değerlendiriyoruz ve ağaca değer veriyoruz.</p>
     </section>
 
     <section class="products" id="ürünler">
         <div class="product-card">
-            <img src="zeytin.jpeg" alt="ahşap sunum tahtası">
-            <h3>ahşap sunum tahtası</h3>
-        </div>
-        <div class="product-card">
-            <img src="kesme.jpeg" alt="kesme tahtası">
+            <img src="kesme.jpeg" alt="ahşap kesme tahtası">
             <h3>kesme tahtası</h3>
         </div>
         <div class="product-card">
-            <img src="peynir.jpeg" alt="dekoratif ahşap">
+            <img src="peynir.jpeg" alt="peynir sunum tahtası">
+            <h3>sunum tahtası</h3>
+        </div>
+        <div class="product-card">
+            <img src="zeytin.jpeg" alt="zeytin ahşap ürün">
             <h3>dekoratif ahşap</h3>
         </div>
     </section>

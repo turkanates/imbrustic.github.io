@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>imbrostic | Artisanal Live-Edge Boards</title>
+    <title>imbrustic | el yapımı ahşap ürünler</title>
     <style>
         * {
             margin: 0;
@@ -13,13 +13,16 @@
         }
 
         body {
-            background-color: #f7f5f0;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: #2c2523;
         }
 
-        /* Top Header */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.92);
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
@@ -27,194 +30,114 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid #e5dfd5;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: #3a2e2b;
-        }
-
-        .nav-menu {
             font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* Hero / Background Banner Section */
-        .hero {
-            position: relative;
-            background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('background.jpg') center/cover no-repeat;
-            height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #ffffff;
-            padding: 0 20px;
-        }
-
-        .hero-content h1 {
-            font-size: 26px;
-            font-weight: 500;
+            font-weight: bold;
             letter-spacing: 2px;
-            max-width: 800px;
-            line-height: 1.4;
-            text-transform: uppercase;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-
-        /* Products Grid Section */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e8e2d9;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        }
-
-        .card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            background-color: #f2eee9;
-        }
-
-        .card-body {
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            justify-content: space-between;
-        }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: 600;
             color: #2c2523;
-            margin-bottom: 8px;
         }
 
-        .card-text {
-            font-size: 13px;
-            color: #6e6259;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .btn-add {
-            background-color: #63432b;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background 0.2s;
+        nav a {
+            margin-left: 20px;
             text-decoration: none;
-            display: inline-block;
+            color: #2c2523;
+            font-weight: 500;
         }
 
-        .btn-add:hover {
-            background-color: #4a3220;
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: rgba(255, 255, 255, 0.75);
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 15px 0 10px 0;
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            background-color: #241d1a;
-            color: #b0a499;
-            font-size: 13px;
-            margin-top: 60px;
+            background-color: rgba(255, 255, 255, 0.92);
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">imbrostic</div>
-        <div class="nav-menu">&#9776;</div>
+        <div class="logo">imbrustic</div>
+        <nav>
+            <a href="#ürünler">ürünler</a>
+            <a href="#hakkımızda">hakkımızda</a>
+            <a href="#iletişim">iletişim</a>
+        </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>ARTISANAL LIVE-EDGE BOARDS. Handcrafted from Reclaimed Wood. Bulk Orders Available. Global Shipping.</h1>
+        <h1>doğal ve el yapımı ahşap ürünler</h1>
+        <p>özgün tasarımlar, kaliteli işçilik.</p>
+    </section>
+
+    <section class="products" id="ürünler">
+        <div class="product-card">
+            <img src="tahta1.jpg" alt="ahşap sunum tahtası">
+            <h3>ahşap sunum tahtası</h3>
+        </div>
+        <div class="product-card">
+            <img src="tahta2.jpg" alt="kesme tahtası">
+            <h3>kesme tahtası</h3>
+        </div>
+        <div class="product-card">
+            <img src="tahta3.jpg" alt="dekoratif ahşap">
+            <h3>dekoratif ahşap</h3>
         </div>
     </section>
 
-    <div class="container">
-        <div class="product-grid">
-
-            <!-- Ürün 1 -->
-            <div class="card">
-                <img src="tahta1.jpg" alt="Cat Nose Serving Board">
-                <div class="card-body">
-                    <div>
-                        <div class="card-title">Cat Nose Serving Board</div>
-                        <div class="card-text">Handcrafted in Turkey, fine olive wood and custom craftsmanship. Food safe finish with global shipping.</div>
-                    </div>
-                    <div>
-                        <button class="btn-add">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ürün 2 -->
-            <div class="card">
-                <img src="tahta2.jpg" alt="Unique Serving Board">
-                <div class="card-body">
-                    <div>
-                        <div class="card-title">Unique Serving Board</div>
-                        <div class="card-text">Handcrafted in olive wood, custom engraving details and rustic finish with global shipping.</div>
-                    </div>
-                    <div>
-                        <button class="btn-add">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ürün 3 -->
-            <div class="card">
-                <img src="tahta3.jpg" alt="Artisanal Live-Edge Board">
-                <div class="card-body">
-                    <div>
-                        <div class="card-title">Artisanal Live-Edge Board</div>
-                        <div class="card-text">Crafted from premium wood, rustic live edges for serving and cutting.</div>
-                    </div>
-                    <div>
-                        <button class="btn-add">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>um
-    </div>
-
     <footer>
-        <p>&copy; imbrostic. All rights reserved.</p>
+        <p>&copy; 2026 imbrustic - tüm hakları saklıdır.</p>
     </footer>
 
 </body>

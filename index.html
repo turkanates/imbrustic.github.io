@@ -38,6 +38,7 @@
             font-weight: bold;
             letter-spacing: 2px;
             color: #2c2523;
+            text-transform: lowercase;
         }
 
         nav a {
@@ -45,14 +46,15 @@
             text-decoration: none;
             color: #2c2523;
             font-weight: 500;
+            text-transform: lowercase;
         }
 
         .hero {
             text-align: center;
-            padding: 80px 30px;
-            background-color: rgba(255, 255, 255, 0.85);
+            padding: 60px 30px;
+            background-color: rgba(255, 255, 255, 0.88);
             margin: 40px auto;
-            max-width: 800px;
+            max-width: 900px;
             border-radius: 8px;
             backdrop-filter: blur(5px);
         }
@@ -61,21 +63,65 @@
             font-size: 32px;
             margin-bottom: 20px;
             text-transform: lowercase;
+            font-style: italic;
+            font-weight: 600;
+            color: #3e2723;
+            letter-spacing: 0.5px;
         }
 
         .hero p {
-            font-size: 17px;
+            font-size: 16px;
             color: #444;
             line-height: 1.6;
             margin-bottom: 12px;
             text-transform: lowercase;
         }
 
+        .description-section {
+            background-color: rgba(255, 255, 255, 0.88);
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 40px 30px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .description-section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-transform: lowercase;
+            color: #3e2723;
+        }
+
+        .description-section h3 {
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+            text-transform: lowercase;
+            color: #3e2723;
+        }
+
+        .description-section p, .description-section ul {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.6;
+            text-transform: lowercase;
+            margin-bottom: 10px;
+        }
+
+        .description-section ul {
+            list-style-position: inside;
+            padding-left: 10px;
+        }
+
+        .description-section li {
+            margin-bottom: 8px;
+        }
+
         .products {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 40px 20px;
+            gap: 20px;
+            padding: 20px;
             flex-wrap: wrap;
             max-width: 1200px;
             margin: 0 auto;
@@ -85,21 +131,22 @@
             background: rgba(255, 255, 255, 0.92);
             border-radius: 8px;
             overflow: hidden;
-            width: 300px;
+            width: 260px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
         }
 
         .product-card img {
             width: 100%;
-            height: 250px;
+            height: 220px;
             object-fit: cover;
         }
 
         .product-card h3 {
-            margin: 15px 0 10px 0;
+            margin: 12px 0 5px 0;
             text-transform: lowercase;
+            font-size: 16px;
         }
 
         footer {
@@ -118,12 +165,12 @@
         <nav>
             <a href="#ürünler">ürünler</a>
             <a href="#hakkımızda">hakkımızda</a>
-            <a href="#iletişim">iletişim</a>
+            <a href="#detaylar">detaylar</a>
         </nav>
     </header>
 
     <section class="hero" id="hakkımızda">
-        <h1>her parçanın bir hikayesi var</h1>
+        <h1>doğanın elleriyle yazılmış benzersiz bir hikâye</h1>
         <p>artan her ahşap parçası, bizim için yeni bir başlangıç. 🤎🤎🤎</p>
         <p>kendi ellerimizle şekillendiriyor, yeniden değerlendiriyor ve her parçaya yeni bir hikâye katıyoruz.</p>
         <p>çünkü ağaca değer veriyor, elimize geçen her parçayı mümkün olduğunca yaşatmayı seviyoruz. 🌿🌿🌿</p>
@@ -131,17 +178,67 @@
 
     <section class="products" id="ürünler">
         <div class="product-card">
-            <img src="kesme.jpeg" alt="ahşap kesme tahtası">
+            <img src="kesme.jpeg" alt="kesme tahtası">
             <h3>kesme tahtası</h3>
         </div>
         <div class="product-card">
-            <img src="peynir.jpeg" alt="tepsi">
-            <h3>tepsi</h3>
+            <img src="peynir.jpeg" alt="sunum tahtası">
+            <h3>sunum tahtası</h3>
         </div>
         <div class="product-card">
-            <img src="zeytin.jpeg" alt="nihale">
-            <h3>nihale</h3>
+            <img src="zeytin.jpeg" alt="dekoratif ahşap">
+            <h3>dekoratif ahşap</h3>
         </div>
+        <div class="product-card">
+            <img src="demlik.jpeg" alt="demlik altlığı">
+            <h3>demlik altlığı</h3>
+        </div>
+        <div class="product-card">
+            <img src="domates.jpeg" alt="sunum tepsisi">
+            <h3>sunum tepsisi</h3>
+        </div>
+        <div class="product-card">
+            <img src="kedili.jpeg" alt="özel tasarım ahşap">
+            <h3>özel tasarım ahşap</h3>
+        </div>
+        <div class="product-card">
+            <img src="kekik.jpeg" alt="rustik sunum">
+            <h3>rustik sunum</h3>
+        </div>
+        <div class="product-card">
+            <img src="limon.jpeg" alt="ahşap nihale">
+            <h3>ahşap nihale</h3>
+        </div>
+    </section>
+
+    <section class="description-section" id="detaylar">
+        <h2>doğal el yapımı ahşap sunum tahtası, kesme tahtası ve nihale koleksiyonu</h2>
+        <p><strong>%100 doğal masif ahşap | zeytinyağlı korumalı | gıda ile temasa mükemmel uygun</strong></p>
+        
+        <h3>ürün açıklaması (b2b / toptan ve perakende)</h3>
+        <p>anadolu ve akdeniz coğrafyasının en seçkin ağaçlarından (meşe, zeytin, kestane ve ardıç) ustalıkla işlenen bu özel koleksiyon, mutfaklarınıza ve sofralarınıza benzersiz bir doğallık katıyor. ürünlerimizin tamamı %100 el emeği olup, sağlığa zararlı vernik, cila veya kimyasal madde içermez. yüzey koruması doğal sızma zeytinyağı ile sağlandığından gıda ile temasa %100 uygundur.</p>
+
+        <h3>ağaç türleri ve öne çıkan özellikleri</h3>
+        <ul>
+            <li><strong>ardıç ağacı:</strong> mis gibi doğal orman kokusu ve büyüleyici damar çatlaklarıyla sofralarınıza otantik bir hava katar.</li>
+            <li><strong>zeytin ağacı:</strong> sert, mermerimsi yoğun damar yapısı ve yüksek doğal yağ oranı ile lekelere ve suya ekstra dayanıklıdır.</li>
+            <li><strong>meşe ağacı:</strong> kendine has koruyucu damarları ve sağlam yapısıyla uzun yıllar boyunca sunumlarınızın başrolü olur.</li>
+            <li><strong>kestane ağacı:</strong> sıcak bal tonları ve hafif yapısıyla hem günlük kullanıma hem de şık ikramlara çok uygundur.</li>
+        </ul>
+
+        <h3>ürün çeşitleri ve ortalama ölçüler</h3>
+        <ul>
+            <li><strong>saplı ve doğal kenar sunum / kesme tahtaları:</strong> ortalama 35 x 14.5 cm / 42 x 16 cm (kalınlık: 1.8 – 2.2 cm)</li>
+            <li><strong>ahşap ızgara nihale çeşitleri:</strong> ortalama 20 x 20 cm / 22 x 18 cm</li>
+            <li><strong>metal kulplu rustik sunum tepsileri:</strong> ortalama 40 x 20 cm / 50 x 22 cm</li>
+        </ul>
+
+        <h3>toptan satış ve özel üretim avantajları</h3>
+        <ul>
+            <li><strong>lazer logo / markalama:</strong> toptan siparişlerinizde firmanıza veya markanıza özel logo yakma/gravür imkanı.</li>
+            <li><strong>doğal ambalaj:</strong> hasır/jüt ip detaylı otantik paketleme seçeneği.</li>
+            <li><strong>kullanım ve bakım:</strong> bulaşık makinesinde yıkamayınız. elde yıkayıp kurulayınız. belirli aralıklarla zeytinyağı ile ovalayarak ahşabın ömrünü uzatabilirsiniz.</li>
+        </ul>
     </section>
 
     <footer>

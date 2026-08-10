@@ -1,347 +1,199 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>imbrustic | el yapımı ahşap ürünler</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Cormorant Garamond", "Georgia", serif;
-        }
+<!-- DOĞAL EL YAPIMI BÖLÜMÜ BAŞLANGICI -->
+<section class="about-section">
+  <div class="container">
+    
+    <div class="main-title-box">
+      <span class="sub-badge">geleneksel & sürdürülebilir</span>
+      <h2 class="main-heading">doğal el yapımı ahşap ürünler</h2>
+      <div class="heading-line"></div>
+      <p class="intro-text">
+        doğanın özgün dokusunu usta ellerin emeğiyle buluşturuyoruz. her bir parçamız, zeytin ve ceviz ağaçlarının benzersiz desenlerini taşıyan tamamen el yapımı özel tasarımlardır.
+      </p>
+    </div>
 
-        body {
-            background-image: url('back.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: #2c2523;
-            line-height: 1.8;
-        }
-
-        header {
-            background-color: rgba(255, 255, 255, 0.94);
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .brand-title, .brand-text {
-            font-family: 'Alex Brush', cursive;
-            font-weight: 700;
-            color: #8b3a0f;
-            letter-spacing: 4px;
-            text-transform: lowercase !important;
-            filter: drop-shadow(0.5px 0.5px 0px #8b3a0f);
-        }
-
-        .logo {
-            font-size: 42px;
-            line-height: 1;
-        }
-
-        nav a {
-            margin-left: 25px;
-            text-decoration: none;
-            color: #2c2523;
-            font-weight: 600;
-            text-transform: lowercase;
-            font-size: 17px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #8b3a0f;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 60px 30px;
-            background-color: rgba(255, 255, 255, 0.88);
-            margin: 40px auto;
-            max-width: 900px;
-            border-radius: 12px;
-            backdrop-filter: blur(5px);
-        }
-
-        .hero h1 {
-            font-size: 34px;
-            margin-bottom: 20px;
-            text-transform: lowercase;
-            font-style: italic;
-            font-weight: 500;
-            color: #3e2723;
-            letter-spacing: 0.5px;
-        }
-
-        .hero p {
-            font-size: 19px;
-            color: #444;
-            margin-bottom: 12px;
-            text-transform: lowercase;
-        }
-
-        .products {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 20px;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .product-card {
-            background: rgba(255, 255, 255, 0.92);
-            border-radius: 12px;
-            overflow: hidden;
-            width: 260px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            text-align: center;
-            padding-bottom: 18px;
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .product-card h3 {
-            margin: 15px 0 5px 0;
-            text-transform: lowercase;
-            font-size: 20px;
-            font-weight: 600;
-            color: #3e2723;
-        }
-
-        .description-section {
-            background-color: rgba(255, 255, 255, 0.88);
-            margin: 40px auto;
-            max-width: 900px;
-            padding: 50px 40px;
-            border-radius: 12px;
-            backdrop-filter: blur(5px);
-            text-align: center;
-        }
-
-        .description-section h2 {
-            font-size: 26px;
-            margin-bottom: 15px;
-            text-transform: lowercase;
-            color: #3e2723;
-            font-weight: 600;
-        }
-
-        .description-section h3 {
-            font-size: 22px;
-            margin: 30px 0 12px 0;
-            text-transform: lowercase;
-            color: #3e2723;
-            font-weight: 600;
-        }
-
-        .description-section p {
-            font-size: 18px;
-            color: #444;
-            text-transform: lowercase;
-            margin-bottom: 12px;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .description-section ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 15px;
-        }
-
-        .description-section li {
-            font-size: 18px;
-            color: #444;
-            text-transform: lowercase;
-            margin-bottom: 10px;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-container {
-            margin-top: 50px;
-            padding: 40px 30px;
-            background-color: rgba(245, 240, 235, 0.95);
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-            border-top: 3px solid #8b3a0f;
-            text-align: center;
-        }
-
-        .contact-container h3 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            color: #3e2723;
-            font-size: 24px;
-            text-transform: lowercase;
-            font-weight: 600;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            max-width: 550px;
-            margin: 0 auto;
-        }
-
-        .contact-form input, 
-        .contact-form textarea {
-            width: 100%;
-            padding: 14px 18px;
-            border: 1px solid #d4c8be;
-            border-radius: 8px;
-            font-size: 16px;
-            background-color: #ffffff;
-            text-transform: lowercase;
-            text-align: center;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-form input:focus, 
-        .contact-form textarea:focus {
-            border-color: #8b3a0f;
-        }
-
-        .contact-form textarea {
-            height: 130px;
-            resize: vertical;
-        }
-
-        .contact-form button {
-            background-color: #3e2723;
-            color: #ffffff;
-            padding: 14px 25px;
-            border: none;
-            border-radius: 8px;
-            font-size: 17px;
-            cursor: pointer;
-            text-transform: lowercase;
-            transition: background-color 0.3s ease;
-            margin: 0 auto;
-            width: 200px;
-        }
-
-        .contact-form button:hover {
-            background-color: #8b3a0f;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.92);
-            margin-top: 60px;
-            text-transform: lowercase;
-            font-size: 16px;
-        }
-
-        footer .brand-text {
-            font-size: 24px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo brand-title">imbrustic</div>
-        <nav>
-            <a href="#hakkımızda">hakkımızda</a>
-            <a href="#ürünler">ürünler</a>
-            <a href="#iletişim">iletişim</a>
-        </nav>
-    </header>
-
-    <section class="hero" id="hakkımızda">
-        <h1>doğanın elleriyle yazılmış benzersiz bir hikâye</h1>
-        <p>artan her ahşap parçası, bizim için yeni bir başlangıç. 🤎🤎🤎</p>
-        <p>kendi ellerimizle şekillendiriyor, yeniden değerlendiriyor ve her parçaya yeni bir hikâye katıyoruz.</p>
-        <p>çünkü ağaca değer veriyor, elimize geçen her parçayı mümkün olduğunca yaşatmayı seviyoruz. 🌿🌿🌿</p>
-    </section>
-
-    <section class="products" id="ürünler">
-        <div class="product-card">
-            <img src="kesme.jpeg" alt="kesme tahtası">
-            <h3>kesme tahtası</h3>
+    <!-- 6'LI RESİMLİ HAREKETLİ KART GRID -->
+    <div class="feature-grid">
+      
+      <!-- Kart 1 -->
+      <div class="feature-card">
+        <div class="img-wrapper">
+          <img src="zeytin.jpeg" alt="zeytin ağacı sunum tahtası">
         </div>
-        <div class="product-card">
-            <img src="baharat.jpeg" alt="tepsi">
-            <h3>tepsi</h3>
+        <div class="card-content">
+          <h3>özel zeytin dokusu</h3>
+          <p>yıllanmış zeytin ağaçlarının benzersiz damar yapılarıyla hazırlanan şık ve dayanıklı sunum tahtaları.</p>
         </div>
-        <div class="product-card">
-            <img src="nihale.jpeg" alt="nihale">
-            <h3>nihale</h3>
+      </div>
+
+      <!-- Kart 2 -->
+      <div class="feature-card">
+        <div class="img-wrapper">
+          <img src="kesme.jpeg" alt="el yapımı kesme tahtası">
         </div>
-    </section>
-
-    <section class="description-section" id="iletişim">
-        <h2>doğal el yapımı ahşap tepsi, nihale ve kesme tahtası koleksiyonu</h2>
-        <p><strong>yüzde yüz doğal masif ahşap, zeytinyağlı korumalı ve gıda ile temasa mükemmel uygun</strong></p>
-        
-        <h3>toptan ve perakende ürün açıklaması</h3>
-        <p>anadolu, akdeniz ve tropikal coğrafyaların en seçkin ağaçları olan meşe, zeytin, kestane, ardıç ve iroko türlerinden ustalıkla işlenen bu özel koleksiyon, mutfaklarınıza ve sofralarınıza benzersiz bir doğallık katıyor. ürünlerimizin tamamı yüzde yüz el emeği olup sağlığa zararlı vernik, cila veya kimyasal madde içermez. yüzey koruması doğal sızma zeytinyağı ile sağlandığından gıda ile temasa yüzde yüz uygundur.</p>
-
-        <h3>ağaç türleri ve öne çıkan özellikleri</h3>
-        <ul>
-            <li><strong>ardıç ağacı:</strong> mis gibi doğal orman kokusu ve büyüleyici damar çatlaklarıyla sofralarınıza otantik bir hava katar.</li>
-            <li><strong>zeytin ağacı:</strong> sert, mermerimsi yoğun damar yapısı ve yüksek doğal yağ oranı ile lekelere ve suya ekstra dayanıklıdır.</li>
-            <li><strong>meşe ağacı:</strong> kendine has koruyucu damarları ve sağlam yapısıyla uzun yıllar boyunca sunumlarınızın başrolü olur.</li>
-            <li><strong>kestane ağacı:</strong> sıcak bal tonları ve hafif yapısıyla hem günlük kullanıma hem de şık ikramlara çok uygundur.</li>
-            <li><strong>iroko ağacı:</strong> koyu sarı ile altın kahve tonlarındaki egzotik dokusu, yüksek sertliği ve suya mükemmel dayanıklılığı ile mutfaklarınızda zamansız bir şıklık sunar.</li>
-        </ul>
-
-        <h3>ürün çeşitleri ve ortalama ölçüler</h3>
-        <ul>
-            <li><strong>saplı ve doğal kenar tepsi, nihale ve kesme tahtaları:</strong> ortalama 35 x 14.5 santimetre ya da 42 x 16 santimetre ölçülerindedir ve kalınlıkları 1.8 ile 2.2 santimetre arasında değişmektedir.</li>
-        </ul>
-
-        <h3>toptan satış ve özel üretim avantajları</h3>
-        <ul>
-            <li><strong>lazer logo ve markalama:</strong> toptan siparişlerinizde firmanıza veya markanıza özel logo yakma veya gravür imkanı sunuyoruz.</li>
-            <li><strong>doğal ambalaj:</strong> hasır ve jüt ip detaylı otantik paketleme seçeneği mevcuttur.</li>
-            <li><strong>kullanım ve bakım:</strong> ürünleri bulaşık makinesinde yıkamayınız. elde yıkayıp kuruladıktan sonra belirli aralıklarla zeytinyağı ile ovalayarak ahşabın ömrünü uzatabilirsiniz.</li>
-        </ul>
-
-        <div class="contact-container">
-            <h3>iletişim</h3>
-            <form class="contact-form" action="https://formspree.io/f/turkan.ates@gmail.com" method="POST">
-                <input type="text" name="ad_soyad" placeholder="adınız soyadınız" required>
-                <input type="email" name="email" placeholder="e-posta adresiniz" required>
-                <input type="text" name="konu" placeholder="konu" required>
-                <textarea name="mesaj" placeholder="mesajınız" required></textarea>
-                <button type="submit">gönder</button>
-            </form>
+        <div class="card-content">
+          <h3>ustalıkla işlenmiş</h3>
+          <p>hiçbir kimyasal madde kullanılmadan, geleneksel marangozluk teknikleriyle şekillendirilen tasarımlar.</p>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        <p>&copy; 2026 <span class="brand-text">imbrustic</span></p>
-    </footer>
+      <!-- Kart 3 -->
+      <div class="feature-card">
+        <div class="img-wrapper">
+          <img src="peynir.jpeg" alt="peynir ve şarküteri tabağı">
+        </div>
+        <div class="card-content">
+          <h3>doğal koruma</h3>
+          <p>organik soğuk sıkım zeytinyağı ve doğal balmumu ile beslenmiş, gıdaya uygun yüzeyler.</p>
+        </div>
+      </div>
 
-</body>
-</html>
+      <!-- Kart 4 -->
+      <div class="feature-card">
+        <div class="img-wrapper">
+          <img src="baharat.jpeg" alt="ahşap baharatlık ve aksesuarlar">
+        </div>
+        <div class="card-content">
+          <h3>benzersiz ve tek</h3>
+          <p>ağacın kendi doğal formuna sadık kalınarak üretildiği için her ürün tek ve kişiye özeldir.</p>
+        </div>
+      </div>
+
+      <!-- Kart 5 -->
+      <div class="feature-card">
+        <div class="img-wrapper">
+          <img src="demlik.jpeg" alt="ahşap altlık ve sunumlar">
+        </div>
+        <div class="card-content">
+          <h3>sıcak estetik</h3>
+          <p>sofralarınıza ve mutfağınıza ahşabın doğal sıcaklığını ve zamansız zarafetini katın.</p>
+        </div>
+      </div>
+
+      <!-- Kart 6 -->
+      <div class="feature-card">
+        <div class="img-wrapper">
+          <img src="limon.jpeg" alt="doğal mutfak gereçleri">
+        </div>
+        <div class="card-content">
+          <h3>sürdürülebilir üretim</h3>
+          <p>doğaya saygılı, uzun ömürlü ve geri dönüştürülebilir malzemelerle geleceğe miras ürünler.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CSS STİLLERİ (<head> içine veya stil dosyanıza ekleyebilirsiniz) -->
+<style>
+  .about-section {
+    padding: 60px 20px;
+    background-color: #fdfbf7;
+    color: #4a3b32;
+    font-family: inherit;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .main-title-box {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .sub-badge {
+    display: inline-block;
+    text-transform: lowercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #8b3a0f;
+    background-color: #f3e9dc;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .main-heading {
+    font-size: 32px;
+    color: #2c1d11;
+    margin: 10px 0;
+    text-transform: lowercase;
+    font-weight: 700;
+  }
+
+  .heading-line {
+    width: 60px;
+    height: 3px;
+    background-color: #8b3a0f;
+    margin: 15px auto;
+    border-radius: 2px;
+  }
+
+  .intro-text {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #66554b;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .feature-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0e6df;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(139, 58, 15, 0.15);
+  }
+
+  .img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .feature-card:hover .img-wrapper img {
+    transform: scale(1.08);
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+    color: #8b3a0f;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+  }
+
+  .card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5c4d44;
+    margin: 0;
+  }
+</style>
+<!-- DOĞAL EL YAPIMI BÖLÜMÜ BİTİŞİ -->
